@@ -6,7 +6,7 @@
 " Date: 15-jun-2014
 
 " Automatic reloading of .vimrc
-autocmd! bufwritepost .vimrc source % 
+autocmd! bufwritepost .vimrc source %
 
 " Set syntaxhighlighting on with colors suited for dark terminal
 syntax on
@@ -43,3 +43,8 @@ vnoremap > >gv  " Better indentation
 " Clear last search highlighting
 " stackoverflow.com/questions/657447
 nnoremap <esc> :noh<return><esc>
+
+" Create informative statusbar
+" Taken from: http://archive09.linux.com/feature/120126
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
+set laststatus=2
