@@ -48,3 +48,24 @@ nnoremap <esc> :noh<return><esc>
 " Taken from: http://archive09.linux.com/feature/120126
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
 set laststatus=2
+
+" Work with very magic regexes always
+" meaning everything except a-z, A-Z, _  and 0-9 have to be escaped
+nnoremap / /\v
+vnoremap / /\v
+
+" Set font size
+" Taken from: http://stackoverflow.com/questions/3316244/set-gvim-font-in-vimrc-file
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Monospace\ 9 
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h9:cANSI
+  endif
+endif
+
+" Search for visually selected text
+" Taken from http://vim.wikia.com/wiki/Search_for_visually_selected_text
+vnoremap // y/<c-r>"<cr>
