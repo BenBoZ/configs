@@ -1,0 +1,9 @@
+--type-set=c=.c,.cpp,.ino,.pde,.h
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=doc
+--smart-case
+--sort-files
+--color
+--follow
+--group
