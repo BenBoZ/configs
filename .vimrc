@@ -1,4 +1,5 @@
 " Configuration file for vim
+" Download latest version on http://github.com/BenBoz/configs
 " Inspired by http://github.com/mbrochh/vim-as-a-python-ide
 " See also: http://www.vimbits.com
 
@@ -88,3 +89,6 @@ vnoremap // y/<c-r>"<cr>
 " stackoverflow.com/questions/657447
 nnoremap <esc> :noh<return><esc>
 
+" Pathogen package manager
+" https://github.com/tpope/vim-pathogen
+execute pathogen#infect()
