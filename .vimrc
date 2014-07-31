@@ -63,6 +63,11 @@ set expandtab
 vnoremap < <gv  " Better indentation
 vnoremap > >gv  " Better indentation
 
+" Enter newline without entering insert mode
+" Taken from http://vim.wikia.com/Insert_newline_without_entering_insert_mode
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
 " ---------------------------- Searching ---------------------------------------
 " Make search case insensitive
 set hlsearch
