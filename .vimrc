@@ -59,6 +59,11 @@ set undolevels=700
 :inoremap <c-up> <esc>viwgUi
 :inoremap <c-down> <esc>viwgui
 
+" Comment out a line
+autocmd FileType python nnoremap <buffer> <leader>c I#<esc>
+autocmd FileType C      nnoremap <buffer> <leader>c I//<esc>
+autocmd FileType vim    nnoremap <buffer> <leader>c I" <esc>
+
 " -------------------- Spaces, tabs & indentation ------------------------------
 " Spaces instead of Tabs
 set tabstop=4
