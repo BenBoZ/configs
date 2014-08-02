@@ -9,6 +9,8 @@
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
+:let mapleader = ","
+
 " ------------------------- Colors ---------------------------------------------
 syntax on
 set colorcolumn=80
