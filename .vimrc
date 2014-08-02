@@ -16,17 +16,17 @@ set background=dark
 
 " Select colorscheme if present
 " Taken from http://stackoverflow.com/questions/5698284
-" Nice Wombat colorscheme from http://www.vim.org/scripts/script.php?script_id=2465 
+" Nice Wombat colorscheme from http://www.vim.org/scripts/script.php?script_id=2465
 if filereadable( expand("$HOME/.vim/colors/wombat256mod.vim") )
     colorscheme wombat256mod
 else
-    colorscheme ron
+    colorscheme desert
 endif
 
 " ------------------------- Interface ------------------------------------------
 " Create informative statusbar
 " Taken from: http://archive09.linux.com/feature/120126
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
 
 " Line numbers and length
@@ -39,7 +39,7 @@ set fo-=t  " don't automatically wrap text when typing
 " Taken from: http://stackoverflow.com/questions/3316244/set-gvim-font-in-vimrc-file
 if has("gui_running")
   if has("gui_gtk2")
-    set guifont=Monospace\ 9 
+    set guifont=Monospace\ 9
   elseif has("gui_macvim")
     set guifont=Menlo\ Regular:h14
   elseif has("gui_win32")
@@ -51,6 +51,10 @@ endif
 " Undo history
 set history=700
 set undolevels=700
+
+" Changing case in insert mode
+:inoremap <c-up> <esc>viwgUi
+:inoremap <c-down> <esc>viwgui
 
 " -------------------- Spaces, tabs & indentation ------------------------------
 " Spaces instead of Tabs
