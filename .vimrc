@@ -12,6 +12,9 @@ autocmd! bufwritepost .vimrc source %
 :let mapleader = ","
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
+" Fix backspace (stackoverflow question: 11520601)
+set backspace=indent,eol,start
+
 " ------------------------- Colors ---------------------------------------------
 syntax on
 set colorcolumn=80
@@ -20,8 +23,8 @@ set background=dark
 " Select colorscheme if present
 " Taken from http://stackoverflow.com/questions/5698284
 " Nice Wombat colorscheme from http://www.vim.org/scripts/script.php?script_id=2465
-if filereadable( expand("$HOME/.vim/colors/wombat256mod.vim") )
-    colorscheme wombat256mod
+if filereadable( expand("$HOME/.vim/colors/blugrine.vim") )
+    colorscheme blugrine
 else
     colorscheme desert
 endif
@@ -103,4 +106,6 @@ nnoremap <esc> :noh<return><esc>
 
 " Pathogen package manager
 " https://github.com/tpope/vim-pathogen
-execute pathogen#infect()
+if filereadable( expand("$HOME/.vim/autoload/pathogen.vim") )
+    execute pathogen#infect()
+endif
