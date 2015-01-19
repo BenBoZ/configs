@@ -23,8 +23,8 @@ set background=dark
 " Select colorscheme if present
 " Taken from http://stackoverflow.com/questions/5698284
 " Nice Wombat colorscheme from http://www.vim.org/scripts/script.php?script_id=2465
-if filereadable( expand("$HOME/.vim/colors/blugrine.vim") )
-    colorscheme blugrine
+if filereadable( expand("$HOME/.vim/colors/corporation.vim") )
+    colorscheme corporation
 else
     colorscheme desert
 endif
@@ -45,7 +45,7 @@ set fo-=t  " don't automatically wrap text when typing
 " Taken from: http://stackoverflow.com/questions/3316244/set-gvim-font-in-vimrc-file
 if has("gui_running")
   if has("gui_gtk2")
-    set guifont=Monospace\ 9
+    set guifont=Inconsolata\ Medium\ 10
   elseif has("gui_macvim")
     set guifont=Menlo\ Regular:h14
   elseif has("gui_win32")
@@ -63,9 +63,10 @@ set undolevels=700
 :inoremap <c-down> <esc>viwgui
 
 " Comment out a line
-autocmd FileType python nnoremap <buffer> <leader>c I#<esc>
-autocmd FileType C      nnoremap <buffer> <leader>c I//<esc>
-autocmd FileType vim    nnoremap <buffer> <leader>c I" <esc>
+autocmd FileType python nnoremap <buffer> <leader>c mmI#`m
+autocmd FileType C      nnoremap <buffer> <leader>c mmI//`m
+autocmd FileType vim    nnoremap <buffer> <leader>c mmI" `m
+autocmd FileType vhdl   nnoremap <buffer> <leader>c mmI-- `m
 
 " -------------------- Spaces, tabs & indentation ------------------------------
 " Spaces instead of Tabs
@@ -83,6 +84,10 @@ vnoremap > >gv  " Better indentation
 " Taken from http://vim.wikia.com/Insert_newline_without_entering_insert_mode
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+
+" Highlight unwanted spaces and tabs
+" Taken from: http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+set list listchars=tab:»·,trail:·
 
 " ---------------------------- Searching ---------------------------------------
 " Make search case insensitive
