@@ -7,3 +7,7 @@
     prompt = false
 [alias]
     d = difftool
+[credential]
+	helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
+[push]
+	default = matching
