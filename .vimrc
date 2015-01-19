@@ -35,6 +35,18 @@ endif
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
 
+" Remove useless GUI elements
+set go-=T " Toolbar
+set go-=m " Menu bar
+set go-=r " Right hand scrollbar
+set go-=l " Left hand scrollbar
+
+" Make them reappear with a toggle key
+:nnoremap <leader>m :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<Cr>
+:nnoremap <leader>t :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<Cr>
+:nnoremap <leader>r :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<Cr>
+:nnoremap <leader>l :if &go=~#'l'<Bar>set go-=l<Bar>else<Bar>set go+=l<Bar>endif<Cr>
+
 " Line numbers and length
 set number " Line numbers
 
