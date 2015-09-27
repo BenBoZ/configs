@@ -80,6 +80,10 @@ autocmd FileType C      nnoremap <buffer> <leader>c mmI//`m
 autocmd FileType vim    nnoremap <buffer> <leader>c mmI" `m
 autocmd FileType vhdl   nnoremap <buffer> <leader>c mmI-- `m
 
+" Skip through quickfix list
+:nnoremap <leader><right> :cn<return>
+:nnoremap <leader><left> :cp<return>
+
 " -------------------- Spaces, tabs & indentation ------------------------------
 " Spaces instead of Tabs
 set tabstop=4
