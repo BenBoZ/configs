@@ -10,6 +10,7 @@ alias d='vim -d'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias ack='ack-grep'
 
 
 # Finding files
