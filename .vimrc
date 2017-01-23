@@ -23,8 +23,8 @@ set background=dark
 " Select colorscheme if present
 " Taken from http://stackoverflow.com/questions/5698284
 " Nice Wombat colorscheme from http://www.vim.org/scripts/script.php?script_id=2465
-if filereadable( expand("$HOME/.vim/colors/corporation.vim") )
-    colorscheme corporation
+if filereadable( expand("$HOME/.vim/colors/oceanblack256.vim") )
+    colorscheme oceanblack256
 else
     colorscheme desert
 endif
