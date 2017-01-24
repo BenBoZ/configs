@@ -58,6 +58,7 @@ function deploy_bash() {
 function deploy_rc() {
 
     symlink "${PROJECTDIR}"/.ackrc ~/.ackrc
+    symlink "${PROJECTDIR}"/.tmux.conf ~/.tmux.conf
 }
 
 
