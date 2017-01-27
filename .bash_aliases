@@ -27,6 +27,16 @@ function find_my_files() {
     find "$1" -user ${USER} -type f -print0 | xargs -0 stat --format '%n' | sort -nr | cut -d: -f2- | grep -v '\.cmake\.state' | grep -v '\..\+\.swp'
 }
 
+function inotify_pytest() {
+
+while inotifywait -r --exclude='.*.swp' -e modify . ; do
+    pytest
+    # Wait a little bit before rescheduling
+    sleep 5
+done
+
+}
+
 # Repeat a command: usage: repeat_me <iterations> <time_to_sleep> <command>
 #                   example: >repeat_me 5 30s echo bla
 #function repeat_me() {
