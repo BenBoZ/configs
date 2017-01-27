@@ -24,7 +24,7 @@ set background=dark
 " Taken from http://stackoverflow.com/questions/5698284
 " Nice Wombat colorscheme from http://www.vim.org/scripts/script.php?script_id=2465
 if filereadable( expand("$HOME/.vim/colors/oceanblack256.vim") )
-    colorscheme oceanblack256
+    colorscheme BusyBee
 else
     colorscheme desert
 endif

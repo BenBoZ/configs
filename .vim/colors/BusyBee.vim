@@ -58,3 +58,8 @@ hi pythonOperator  guifg=#7e8aa2 gui=none ctermfg=103
 hi pythonBuiltinFunction guifg=#009000 gui=none ctermfg=200
 hi pythonExClass   guifg=#009000 gui=none ctermfg=200
 
+" Diff colors
+hi DiffAdd        ctermbg=22
+hi DiffDelete     ctermbg=88
+hi DiffChange     ctermbg=94
+hi DiffText       ctermbg=94
