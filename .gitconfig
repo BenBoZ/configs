@@ -1,6 +1,10 @@
+[push]
+	default = simple
 [user]
 	email = ben.spoor@gmail.com
 	name = ben
+[alias]
+	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
 [diff]
 	tool = vimdiff
 [difftool]
@@ -9,5 +13,3 @@
     d = difftool
 [credential]
 	helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
-[push]
-	default = matching
