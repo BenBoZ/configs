@@ -15,6 +15,9 @@ autocmd! bufwritepost .vimrc source %
 " Fix backspace (stackoverflow question: 11520601)
 set backspace=indent,eol,start
 
+" Search for tags file in cwd and up
+set tags=./tags,tags;
+
 " ------------------------- Colors ---------------------------------------------
 syntax on
 set colorcolumn=80

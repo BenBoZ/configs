@@ -8,8 +8,12 @@
 [diff]
 	tool = vimdiff
 [difftool]
-    prompt = false
+	prompt = false
 [alias]
     d = difftool
 [credential]
 	helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
+[push]
+	default = simple
+[merge]
+	tool = vimdiff
