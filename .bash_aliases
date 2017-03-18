@@ -4,6 +4,7 @@
 # Editing
 alias e='vim -O'
 alias d='vim -d'
+alias s='git status'
 
 
 # Navigation
